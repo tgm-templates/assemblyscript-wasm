@@ -26,6 +26,18 @@ export function welcome(name: string): string {
 }
 ```
 
+### Refer the Wasm module in your Deno app
+
+Push your code on Github, then use Deno PKG to refer mod.ts as following:
+
+```typescript
+import {add, welcome} from "https://denopkg.com/@github_user_name@/@moduleName@/mod.ts";
+
+console.log(add(1, 2))
+console.log(welcome("Jackie"))
+
+```
+
 # References
 
 * AssemblyScript: https://www.assemblyscript.org/
