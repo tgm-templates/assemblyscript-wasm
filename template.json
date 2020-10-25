@@ -2,6 +2,7 @@
   "name": "assemblyscript-wasm",
   "repository": "https://github.com/tgm-templates/assemblyscript-wasm",
   "description": "AssemblyScript WebAssembly template",
+  "post_create": "npm install",
   "variables": [
     {
       "name": "moduleName",
