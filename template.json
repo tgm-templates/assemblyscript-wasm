@@ -1,0 +1,18 @@
+{
+  "name": "assemblyscript-wasm",
+  "repository": "https://github.com/tgm-templates/assemblyscript-wasm",
+  "description": "AssemblyScript WebAssembly template",
+  "variables": [
+    {
+      "name": "moduleName",
+      "description": "Wasm module name"
+    },
+    {
+      "name": "github_user_name",
+      "description": "Your github user name"
+    }
+  ],
+  "files": [
+    "package.json","README.md"
+  ]
+}
