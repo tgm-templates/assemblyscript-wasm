@@ -14,17 +14,17 @@
   "scripts": {
     "test": "jest",
     "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized",
-    "asbuild:untouched": "asc ./node_modules/as-bind/lib/assembly/as-bind.ts assembly/index.ts -b build/untouched.wasm -t build/untouched.wat --sourceMap --debug",
-    "asbuild:optimized": "asc ./node_modules/as-bind/lib/assembly/as-bind.ts assembly/index.ts -b build/optimized.wasm -t build/optimized.wat --sourceMap --optimize",
+    "asbuild:untouched": "asc ./node_modules/as-bind/lib/assembly/as-bind.ts assembly/index.ts -b build/untouched.wasm -t build/untouched.wat --sourceMap --exportRuntime --debug",
+    "asbuild:optimized": "asc ./node_modules/as-bind/lib/assembly/as-bind.ts assembly/index.ts -b build/optimized.wasm -t build/optimized.wat --sourceMap --exportRuntime --optimize",
     "asbuild:watch": "onchange -i 'assembly/**/*' -- npm run asbuild",
     "deno:build": "npm run asbuild && deno run -A --unstable --no-check build.ts"
   },
   "dependencies": {
-    "@assemblyscript/loader": "^0.16.1",
-    "as-bind": "^0.4.2"
+    "@assemblyscript/loader": "^0.18.11",
+    "as-bind": "^0.6.1"
   },
   "devDependencies": {
-    "assemblyscript": "^0.16.1",
-    "jest": "^26.6.1"
+    "assemblyscript": "^0.18.11",
+    "jest": "^26.6.3"
   }
 }
